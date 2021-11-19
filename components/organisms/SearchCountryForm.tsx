@@ -46,6 +46,10 @@ const SearchCountryForm = () => {
     setCountryFilteredList([]);
     setFieldValue(country.name.common);
   };
+
+  const handleBlur = () => {
+    setCountryFilteredList([]);
+  };
   return (
     <form className="flex w-full space-x-3 items-start">
       <div className="w-full">
@@ -55,6 +59,7 @@ const SearchCountryForm = () => {
             strings.components.organisms.SearchCountryForm.placeholder
           }
           onChange={handleChange}
+          onBlur={handleBlur}
           error={error}
           data={countryFilteredList}
           optionClick={handleSelect}

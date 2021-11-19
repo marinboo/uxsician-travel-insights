@@ -2,10 +2,11 @@ const FilterField: React.FC<{
   value: string;
   placeholder: string;
   onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onBlur: () => void;
   optionClick: (option: any) => void;
   error: string | null;
   data: any[];
-}> = ({ value, placeholder, onChange, optionClick, error, data }) => (
+}> = ({ value, placeholder, onChange, onBlur, optionClick, error, data }) => (
   <div className="relative">
     <input onChange={onChange} value={value} placeholder={placeholder} />
     {error && (

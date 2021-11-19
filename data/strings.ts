@@ -13,7 +13,7 @@ const strings = {
       head: {
         title: "Uxsician Travel Insights",
         metaDescription:
-          "Tool to get more insights on before your trip to any country. It's not about your hotel, flight or car rental, it's about the country culture, currency, top touristic sights, etc.",
+          "Tool to get more insights on before your trip to any country. It's not about your hotel, flight or car rental, it's about the country culture, currency, top touristic sights, and more.",
       },
       footer: {
         copyright: `Copyright © ${new Date().getFullYear()} Uxsician`,

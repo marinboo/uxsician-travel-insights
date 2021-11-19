@@ -3,10 +3,10 @@ import strings from "../../data/strings";
 
 const Head = () => (
   <NextHead>
-    <title>{strings.components.molecules.head.title}</title>
+    <title>{strings.components.atoms.head.title}</title>
     <meta
       name="description"
-      content={strings.components.molecules.head.metaDescription}
+      content={strings.components.atoms.head.metaDescription}
     />
     <link rel="icon" href="/favicon.ico" />
   </NextHead>

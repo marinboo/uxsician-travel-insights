@@ -1,10 +1,15 @@
 const strings = {
+  global: {
+    title: "Uxsician Travel Insights",
+    description:
+      "Search for a country and we will find some travel insights about it for you.",
+  },
   pages: {
     index: {},
     insights: {},
   },
   components: {
-    molecules: {
+    atoms: {
       head: {
         title: "Uxsician Travel Insights",
         metaDescription:
@@ -14,7 +19,15 @@ const strings = {
         copyright: `Copyright © ${new Date().getFullYear()} Uxsician`,
       },
     },
-    organisms: {},
+    organisms: {
+      SearchCountryForm: {
+        error: "You must type or select a valid Country name.",
+        placeholder: "Type or select a Country Name",
+      },
+      commingSoonCard: {
+        copy: "Comming Soon!",
+      },
+    },
   },
 };
 

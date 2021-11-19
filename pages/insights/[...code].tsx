@@ -1,15 +1,18 @@
 import type { NextPage } from "next";
 import { useRouter } from "next/dist/client/router";
-import Footer from "../../components/molecules/Footer";
-import Head from "../../components/molecules/Head";
+import Head from "../../components/atoms/Head";
+import Footer from "../../components/atoms/Footer";
 import { useQuery } from "react-query";
-import Card from "../../components/molecules/Card";
+import Card from "../../components/atoms/Card";
+import ComingSoonCard from "../../components/organisms/ComingSoonCard";
+import SearchCountryForm from "../../components/organisms/SearchCountryForm";
 import {
   ipApiUserCountry,
   restCountriesByListOfCodes,
   freeCurrencyAPICurrency,
   dateNagerAtHolidays,
 } from "../../utils/api";
+import strings from "../../data/strings";
 
 const Insights: NextPage = () => {
   const router = useRouter();
@@ -44,7 +47,10 @@ const Insights: NextPage = () => {
 
       <div className="h-screen flex flex-col justify-between">
         <main className="container mx-auto my-8 max-w-md md:max-w-3xl lg:max-w-6xl">
-          <h1>Travel Insights</h1>
+          <h1>{strings.global.title}</h1>
+          <div className="max-w-xl my-6">
+            <SearchCountryForm />
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mt-8">
             <Card
               title="Home Country Information"
@@ -113,36 +119,10 @@ const Insights: NextPage = () => {
                 )}
               </div>
             </Card>
-            <Card
-              title="Host Country Map"
-              footer={
-                <a href="https://www.google.com/search?q=costa+rica">
-                  More about
-                </a>
-              }
-            >
-              <strong>Comming Soon!</strong>
-            </Card>
-            <Card
-              title="Currency"
-              footer={
-                <a href="https://www.google.com/search?q=costa+rica">
-                  More about
-                </a>
-              }
-            >
-              <strong>Comming Soon!</strong>
-            </Card>
-            <Card
-              title="Translations"
-              footer={
-                <a href="https://www.google.com/search?q=costa+rica">
-                  More about
-                </a>
-              }
-            >
-              <strong>Comming Soon!</strong>
-            </Card>
+
+            <ComingSoonCard title="Host Country Map" />
+            <ComingSoonCard title="Currency" />
+            <ComingSoonCard title="Translations" />
             <Card
               title="Next Holidays"
               footer={
@@ -163,26 +143,9 @@ const Insights: NextPage = () => {
                   </div>
                 ))}
             </Card>
-            <Card
-              title="Events"
-              footer={
-                <a href="https://www.google.com/search?q=costa+rica">
-                  More about
-                </a>
-              }
-            >
-              <strong>Comming Soon!</strong>
-            </Card>
-            <Card
-              title="Weather"
-              footer={
-                <a href="https://www.google.com/search?q=costa+rica">
-                  More about
-                </a>
-              }
-            >
-              <strong>Comming Soon!</strong>
-            </Card>
+
+            <ComingSoonCard title="Events" />
+            <ComingSoonCard title="Weather" />
           </div>
         </main>
 
